@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Add an Angelwood task</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Add this page as a task</h1>
+
+    <section id="setup" hidden>
+      <p>Connect your Angelwood account with an API key first.</p>
+      <div class="row">
+        <button id="open-settings" type="button">Open settings</button>
+      </div>
+    </section>
+
+    <form id="task-form" hidden>
+      <label for="project">Project</label>
+      <select id="project" required></select>
+
+      <label for="title">Task</label>
+      <input id="title" type="text" maxlength="500" required />
+
+      <label for="description">Notes</label>
+      <textarea id="description" maxlength="10000"></textarea>
+
+      <label for="priority">Priority</label>
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+        <option value="critical">Critical</option>
+      </select>
+
+      <div class="row">
+        <button id="submit" type="submit">Add task</button>
+        <button id="settings-link" type="button" class="secondary">Settings</button>
+      </div>
+    </form>
+
+    <div id="status" role="status" aria-live="polite"></div>
+
+    <script src="api.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

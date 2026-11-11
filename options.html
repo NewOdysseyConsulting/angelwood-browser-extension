@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Angelwood settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="options">
+    <h1>Connect Angelwood</h1>
+    <p class="muted">
+      In Angelwood, open Settings, create an API key with write permission and paste it here. The key is stored only in
+      this browser and is sent only to Angelwood.
+    </p>
+    <p class="muted">
+      No account yet? <a href="https://app.angelwood.io/sign-up" target="_blank" rel="noopener">Start a free trial</a>.
+    </p>
+
+    <form id="key-form">
+      <label for="api-key">API key</label>
+      <input id="api-key" type="password" autocomplete="off" spellcheck="false" placeholder="sk_live_…" />
+      <div class="row">
+        <button id="save" type="submit">Save and test</button>
+        <button id="remove" type="button" class="secondary">Remove key</button>
+      </div>
+    </form>
+
+    <div id="status" role="status" aria-live="polite"></div>
+
+    <script src="api.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
